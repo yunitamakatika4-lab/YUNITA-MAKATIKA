@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simple Translation</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 25px 30px;
+            background: white;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        h1 {
+            margin: 0 0 25px 0;
+            font-size: 48px;
+            color: #777;
+            font-weight: bold;
+        }
+
+        .canvas-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        canvas {
+            border: 1px solid #555;
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Simple Translation</h1>
+
+    <div class="canvas-container">
+
+        <!-- CANVAS SEBELAH KIRI -->
+        <canvas id="canvas1" width="700" height="680"></canvas>
+
+        <!-- CANVAS SEBELAH KANAN -->
+        <canvas id="canvas2" width="700" height="680"></canvas>
+
+    </div>
+
+    <script>
+
+        // =====================================
+        // CANVAS KIRI
+        // =====================================
+
+        const canvas1 = document.getElementById("canvas1");
+        const ctx1 = canvas1.getContext("2d");
+
+        // Kotak pink pertama
+        ctx1.fillStyle = "rgba(220, 180, 185, 0.55)";
+        ctx1.fillRect(217, 231, 239, 228);
+
+        // Kotak hijau
+        ctx1.fillStyle = "rgba(130, 190, 185, 0.55)";
+        ctx1.fillRect(339, 346, 235, 228);
+
+        // Kotak pink kedua
+        ctx1.fillStyle = "rgba(220, 180, 185, 0.55)";
+        ctx1.fillRect(459, 459, 239, 228);
+
+
+        // =====================================
+        // CANVAS KANAN
+        // SIMPLE TRANSLATION
+        // =====================================
+
+        const canvas2 = document.getElementById("canvas2");
+        const ctx2 = canvas2.getContext("2d");
+
+
+        // -------------------------------------
+        // KOTAK PINK PERTAMA
+        // -------------------------------------
+
+        ctx2.save();
+
+        // Translasi ke kiri atas
+        ctx2.translate(-1, -5);
+
+        ctx2.fillStyle = "rgba(220, 180, 185, 0.55)";
+        ctx2.fillRect(0, 0, 192, 214);
+
+        ctx2.restore();
+
+
+        // -------------------------------------
+        // KOTAK HIJAU
+        // -------------------------------------
+
+        ctx2.save();
+
+        // Translasi
+        ctx2.translate(68, 95);
+
+        ctx2.fillStyle = "rgba(130, 190, 185, 0.55)";
+        ctx2.fillRect(0, 0, 235, 235);
+
+        ctx2.restore();
+
+
+        // -------------------------------------
+        // KOTAK PINK KEDUA
+        // -------------------------------------
+
+        ctx2.save();
+
+        // Translasi
+        ctx2.translate(190, 210);
+
+        ctx2.fillStyle = "rgba(220, 180, 185, 0.55)";
+        ctx2.fillRect(0, 0, 245, 235);
+
+        ctx2.restore();
+
+    </script>
+
+</body>
+</html>

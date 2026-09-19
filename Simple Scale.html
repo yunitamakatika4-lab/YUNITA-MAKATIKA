@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Scale</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 18px 40px;
+    background: white;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {
+    margin: 0 0 35px 8px;
+    font-size: 50px;
+    color: black;
+}
+
+/* 3 KOTAK */
+.layout {
+    width: 100%;
+    max-width: 1160px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 550px 520px;
+
+    gap: 8px;
+}
+
+/* KOTAK BESAR */
+.box {
+    position: relative;
+    border: 1px solid #555;
+    overflow: hidden;
+    background: white;
+}
+
+
+/* =========================
+   KOTAK 1
+   ========================= */
+
+.kotak-satu .p1 {
+    position: absolute;
+    width: 185px;
+    height: 185px;
+    left: 5px;
+    top: 5px;
+
+    background: rgba(220, 173, 180, 0.55);
+}
+
+.kotak-satu .h1 {
+    position: absolute;
+    width: 185px;
+    height: 185px;
+    left: 94px;
+    top: 94px;
+
+    background: rgba(139, 188, 179, 0.58);
+}
+
+.kotak-satu .p2 {
+    position: absolute;
+    width: 185px;
+    height: 185px;
+    left: 184px;
+    top: 184px;
+
+    background: rgba(220, 173, 180, 0.55);
+}
+
+
+/* =========================
+   KOTAK 2
+   ========================= */
+
+.kotak-dua .p3 {
+    position: absolute;
+    width: 98px;
+    height: 285px;
+    left: 0;
+    top: 0;
+
+    background: rgba(220, 173, 180, 0.55);
+}
+
+.kotak-dua .h2 {
+    position: absolute;
+    width: 98px;
+    height: 275px;
+    left: 47px;
+    top: 143px;
+
+    background: rgba(139, 188, 179, 0.58);
+}
+
+.kotak-dua .p4 {
+    position: absolute;
+    width: 98px;
+    height: 285px;
+    left: 94px;
+    top: 285px;
+
+    background: rgba(220, 173, 180, 0.55);
+}
+
+
+/* =========================
+   KOTAK 3
+   ========================= */
+
+.kotak-tiga {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.kotak-tiga .p5 {
+    position: absolute;
+    width: 100%;
+    height: 34px;
+    left: 0;
+    top: 0;
+
+    background: rgba(220, 173, 180, 0.55);
+}
+
+.kotak-tiga .h3 {
+    position: absolute;
+    width: 320px;
+    height: 40px;
+    left: 155px;
+    top: 18px;
+
+    background: rgba(139, 188, 179, 0.58);
+}
+
+.kotak-tiga .p6 {
+    position: absolute;
+    width: 320px;
+    height: 40px;
+    left: 315px;
+    top: 37px;
+
+    background: rgba(220, 173, 180, 0.55);
+}
+</style>
+</head>
+<body>
+
+    <h1>Simple Scale</h1>
+
+    <div class="layout">
+
+        <!-- KOTAK 1 -->
+        <div class="box kotak-satu">
+            <div class="pink p1"></div>
+            <div class="hijau h1"></div>
+            <div class="pink p2"></div>
+        </div>
+
+        <!-- KOTAK 2 -->
+        <div class="box kotak-dua">
+            <div class="pink p3"></div>
+            <div class="hijau h2"></div>
+            <div class="pink p4"></div>
+        </div>
+
+        <!-- KOTAK 3 -->
+        <div class="box kotak-tiga">
+            <div class="pink p5"></div>
+            <div class="hijau h3"></div>
+            <div class="pink p6"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

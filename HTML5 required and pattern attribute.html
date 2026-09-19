@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 5 required and pattern Attribute Examples</title>
+
+    <style>
+        body {
+            margin: 30px 40px;
+            font-family: "Courier New", monospace;
+            color: #666;
+        }
+
+        h1 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            color: black;
+            margin-bottom: 35px;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        label {
+            width: 220px;
+            font-size: 25px;
+        }
+
+        .required {
+            color: rgb(255, 25, 0);
+            font-weight: bold;
+        }
+
+        input {
+            height: 38px;
+            border: 1px solid #aaa;
+            font-size: 20px;
+            padding: 0 8px;
+        }
+
+        .first {
+            width: 355px;
+        }
+
+        .middle {
+            width: 355px;
+        }
+
+        .last {
+            width: 355px;
+        }
+
+        .phone {
+            width: 355px;
+        }
+
+        .email {
+            width: 355px;
+        }
+
+        .submit {
+            margin-top: 5px;
+            padding: 7px 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML 5 required and pattern Attribute Examples</h1>
+
+    <form>
+
+        <div class="form-row">
+            <label class="required">First Name:</label>
+            <input
+                class="first"
+                type="text"
+                placeholder="Enter your name"
+                required
+            >
+        </div>
+
+        <div class="form-row">
+            <label>Middle Name:</label>
+            <input
+                class="middle"
+                type="text"
+            >
+        </div>
+
+        <div class="form-row">
+            <label class="required">Last Name:</label>
+            <input
+                class="last"
+                type="text"
+                required
+            >
+        </div>
+
+        <div class="form-row">
+            <label class="required">Phone Number:</label>
+            <input
+                class="phone"
+                type="tel"
+                pattern="[0-9]{10,13}"
+                required
+            >
+        </div>
+
+        <div class="form-row">
+            <label class="required">E-mail:</label>
+            <input
+                class="email"
+                type="email"
+                required
+            >
+        </div>
+
+        <input
+            class="submit"
+            type="submit"
+            value="Submit"
+        >
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simple Rotation</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: white;
+            font-family: "Times New Roman", serif;
+        }
+
+        h1 {
+            margin: 0 0 55px 0;
+            font-size: 52px;
+            font-weight: normal;
+            color: #555555;
+        }
+
+        .canvas-container {
+            display: flex;
+            gap: 12px;
+        }
+
+        canvas {
+            border: 1px solid #555555;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Simple Rotation</h1>
+
+    <div class="canvas-container">
+
+        <canvas id="canvas1" width="740" height="690"></canvas>
+
+        <canvas id="canvas2" width="740" height="690"></canvas>
+
+    </div>
+<script>
+
+    // ==========================================
+    // FUNGSI MEMBUAT PERSEGI BEROTASI
+    // ==========================================
+
+    function drawSquare(ctx, x, y, size, rotation, color) {
+
+        ctx.save();
+
+        // Memindahkan titik pusat
+        ctx.translate(x, y);
+
+        // Rotasi
+        ctx.rotate(rotation * Math.PI / 180);
+
+        // Warna
+        ctx.fillStyle = color;
+
+        // Membuat persegi
+        ctx.fillRect(
+            -size / 2,
+            -size / 2,
+            size,
+            size
+        );
+
+        ctx.restore();
+    }
+
+
+    // ==========================================
+    // WARNA
+    // ==========================================
+
+    const pink = "rgba(190, 165, 175, 0.45)";
+    const green = "rgba(100, 175, 170, 0.45)";
+
+
+    // ==========================================
+    // CANVAS PERTAMA
+    // ==========================================
+
+    const canvas1 = document.getElementById("canvas1");
+    const ctx1 = canvas1.getContext("2d");
+
+
+    // Kotak merah muda atas
+    drawSquare(
+        ctx1,
+        135,
+        145,
+        220,
+        20,
+        pink
+    );
+
+
+    // SATU kotak hijau saja
+    drawSquare(
+        ctx1,
+        160,
+        320,
+        210,
+        20,
+        green
+    );
+
+
+    // Kotak merah muda bawah
+    drawSquare(
+        ctx1,
+        255,
+        515,
+        220,
+        20,
+        pink
+    );
+
+
+    // ==========================================
+    // CANVAS KEDUA
+    // ==========================================
+
+    const canvas2 = document.getElementById("canvas2");
+    const ctx2 = canvas2.getContext("2d");
+
+
+    // Kotak merah muda kiri
+    drawSquare(
+        ctx2,
+        145,
+        135,
+        220,
+        -20,
+        pink
+    );
+
+
+    // SATU kotak hijau saja
+    drawSquare(
+        ctx2,
+        320,
+        150,
+        210,
+        -20,
+        green
+    );
+
+
+    // Kotak merah muda kanan
+    drawSquare(
+        ctx2,
+        525,
+        310,
+        220,
+        -20,
+        pink
+    );
+
+</script>
+</body>
+</html>
+
+        
