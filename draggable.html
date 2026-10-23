@@ -1,0 +1,135 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New school drag and drop</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #babab8;
+            font-family: Arial, sans-serif;
+            color: #555;
+        }
+
+        h2 {
+            margin: 25px 90px 0 90px;
+            padding: 8px 0 10px 0;
+
+            font-size: 32px;
+            font-weight: bold;
+
+            border-top: 2px solid #777;
+            border-bottom: 2px solid #777;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+
+            margin-top: 40px;
+            margin-left: 100px;
+
+            gap: 80px;
+        }
+        #drag {
+            width: 143px;
+            height: 136px;
+            background-color: #96aab5;
+
+            border: 1px solid #777;
+
+            box-sizing: border-box;
+
+            padding: 7px;
+
+            font-size: 25px;
+            color: #555;
+
+            cursor: grab;
+        }
+        #drop {
+            width: 245px;
+            height: 240px;
+            background-color: #b4b4b2;
+
+            border: 1px solid #777;
+
+            box-sizing: border-box;
+
+            padding: 8px;
+
+            font-size: 25px;
+            color: #555;
+        }
+
+        .large-box {
+            width: 935px;
+            height: 220px;
+            background-color: #b4b4b2;
+
+            border: 1px solid #999;
+
+            box-sizing: border-box;
+
+            margin-top: 22px;
+            margin-left: 135px;
+        }
+    </style>
+</head>
+<body>
+    <h2>New school drag and drop</h2>
+
+    <div class="container">
+
+        <div
+            id="drag"
+            draggable="true"
+            ondragstart="drag(event)"
+        >
+            Drag me!
+        </div>
+
+        <div
+            id="drop"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+        >
+            Drop here!
+        </div>
+
+    </div>
+
+
+    <div
+        class="large-box"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+    >
+    </div>
+    <script>
+
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData(
+                "text",
+                event.target.id
+            );
+        }
+
+        function drop(event) {
+            event.preventDefault();
+
+            var data =
+                event.dataTransfer.getData("text");
+
+            var element =
+                document.getElementById(data);
+
+            event.target.appendChild(element);
+        }
+</script>
+</body>
+</html>
