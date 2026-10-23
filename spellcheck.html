@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>spellcheck Attribute Examples</title>
+    <style>
+        body {
+            margin: 30px 40px;
+            font-family: "Courier New", monospace;
+            color: black;
+        }
+
+        h1 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            color: black;
+            margin-bottom: 35px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+            font-size: 23px;
+        }
+
+        .label {
+            width: 510px;
+        }
+
+        .text-field {
+            width: 500px;
+            height: 45px;
+            font-size: 21px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            width: 500px;
+            height: 105px;
+            font-size: 21px;
+            padding: 8px;
+            box-sizing: border-box;
+            font-family: "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>spellcheck Attribute Examples</h1>
+
+    <div class="row">
+        <div class="label">
+            Spellcheck on:
+        </div>
+
+        <div>
+            There is a tyyypooo here.
+            Did the browser spot it?
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="label">
+            Spellcheck off:
+        </div>
+
+        <div>
+            There is a tyyypooo here.
+            Did the browser spot it?
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="label">
+            Text field: (spellcheck on)
+        </div>
+
+        <input
+            class="text-field"
+            type="text"
+            spellcheck="true"
+            value="There is a tyyypooo here. Did the browser spot it?"
+        >
+    </div>
+
+
+    <div class="row">
+        <div class="label">
+            Text field: (spellcheck off)
+        </div>
+
+        <input
+            class="text-field"
+            type="text"
+            spellcheck="false"
+            value="There is a tyyypooo here. Did the browser spot it?"
+        >
+    </div>
+
+
+    <div class="row">
+        <div class="label">
+            Text area: (spellcheck on)
+        </div>
+
+        <textarea spellcheck="true">There is a tyyypooo here. Did the browser spot it?</textarea>
+    </div>
+
+
+    <div class="row">
+        <div class="label">
+            Text area: (spellcheck off)
+        </div>
+
+        <textarea spellcheck="false">There is a tyyypooo here. Did the browser spot it?</textarea>
+    </div>
+</body>
+</html>
