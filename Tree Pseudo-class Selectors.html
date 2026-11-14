@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Pseudo-class Selectors</title>
+<style type="text/css" media="screen">
+  :root {font-family: Verdana, Geneva, sans-serif;}  /* same as setting 
+HTML element */
+  ul li:nth-child(odd) {color: red;}  /* odd items red */
+  ul li:nth-child(even) {color: blue;} /* even items blue */
+  ul li:nth-child(5)  {font-size: xx-large;}  /* 5th item bigger */
+  ul li:nth-child(3n) {font-style: italic;}   /* every third item italic */
+  ul li:nth-last-child(2) {text-decoration: underline;}  /* second 
+from the last child underlined */
+  ul li:last-child {background-color: black; color: white;} /* same 
+as :nth-last-child(1) */
+  p#test1 span:first-of-type {color: green;}
+  p#test1 span:last-of-type {color: red;}
+  p#test1 span:nth-of-type(3) {font-size: larger;}
+  p#test1 span:nth-last-of-type(2) {text-decoration: underline;}
+  p.test2 span:only-child {color: green;}
+  p.test3 em:only-of-type {background-color: red;}
+  p:empty {border: 2px solid red;}
+</style>
+</head>
+<body>
+<ul>
+    <li>Odd (Red)</li>
+    <li>Even (Blue)</li>
+    <li>Odd and by three so italic</li>
+    <li>Even</li>
+    <li>Odd and bigger because it is 5th child</li>
+    <li>Even and by three so italic</li>
+    <li>Odd</li>
+    <li>Even</li>
+    <li>Odd and 2nd to the last item should be underlined, also by three  
+        so italic</li>
+    <li>Last item is white on black</li>
+</ul>
+
+<p id="test1">This is <em>not a span</em>. I am the <span>first span so I 
+am green</span>. I am the  <span>second span</span> so nothing.  I am the 
+<span>third span so I am big</span>.  <span>Fourth span also nothing.</span> 
+<span>Fifth span and second to last so underlined.</span> I am the <span>last 
+span so I am red</span>.  This is <em>not a span</em>.</p>
+
+<p class="test2">I am <span>only child so I am green</span>.</p>
+<p class="test2">I have <span>two</span> <b>children</b> so no green here.</p>
+<p class="test3">I have a single <em>em so I am red</em>.</p>
+<p class="test3">I have <em>two</em> <em>em</em> tags so neither is red.</p>
+<p>Empty element below.</p>
+<p></p>    
+<p>Empty element above.</p>
+</body>
+</html>

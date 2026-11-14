@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Child Pseudo-Class</title>
+<style type="text/css" media="screen"> 
+ p:first-child { color: red;} 
+</style> 
+</head>
+<body>
+<p>I should be red because I am the first child in the body.</p>
+<p>I should not be red because I am the second child in the body.</p>
+<div>
+    <p>I should be red because I am the first child of div.</p>
+    <p>Second child of div, thus not red.</p>
+</div>    
+</body>
+</html>

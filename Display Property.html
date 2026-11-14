@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+<style type="text/css" media="all"> 
+  p {border: 2px solid red;} 
+  p.remove   {display: none;} 
+  p.invisible {visibility: hidden;} 
+  p.setasinline {display:inline;} 
+  p.setasblock em {display: block;} 
+  p.setaslist em {display:list-item; list-style-position: inside;} 
+  ul li {display: inline;} 
+</style>
+</head>
+<body>
+ <p>First paragraph (next is display:none).</p> 
+<p class="remove">Removed second paragraph.</p> 
+<p>Third paragraph (previous is display:none).</p> 
+<p>Fourth paragraph (next is visibility:hidden).</p> 
+<p class="invisible">Invisible fifth paragraph.</p> 
+<p>Sixth paragraph (previous is visibility:hidden).</p> 
+<p class="setasinline">Inline paragraph.</p> 
+<p class="setasinline">Inline paragraph.</p> 
+<p class="setasinline">Inline paragraph.</p> 
+<p class="setasblock">This paragraph <em>has some</em> <em>emphasis 
+tags</em> that act as blocks.</p> 
+<p>This paragraph <em>has some</em> <em>emphasis tags</em> that act 
+normally.</p> 
+<p class="setaslist">List made from em tags: <em>Item</em>  <em>Item</em>  
+<em>Item</em> </p> 
+<p>List below not displaying as such</p> 
+<ul> 
+  <li>Item</li> 
+<li>Item</li> 
+<li>Item</li> 
+</ul>    
+</body>
+</html>

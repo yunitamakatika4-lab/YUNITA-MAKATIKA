@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<title>:before and :after Pseudo-elements</title> 
+<style>
+.external:after {
+    content: url('offsite.gif'); 
+    margin-left: .2em;} 
+.warning:before {
+    content: "Warning!";  
+    background-color: yellow;  
+    border-style: dashed; border-width: 1px; 
+     margin-right: 1em;} 
+.warning:after {
+    content: "**";  
+    background-color: yellow;  
+    border-style: dashed; border-width: 1px; 
+    margin-left: 1em;} 
+</style>
+<head>
+<body> 
+<p> 
+<a href="#">Local link</a><br> 
+<a href="http://www.htmlref.com" class="external">external link</a> 
+</p> 
+<p class="warning">This is dangerous example text. 
+Be careful, you may suffer boredom typing in a bunch of fake 
+text just to make this example work. Don’t worry, almost done.  
+Finally!</p> 
+</body> 
+</html>

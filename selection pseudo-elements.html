@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::selection Pseudo-elements</title>
+<style> 
+ #select1::selection {background-color: red;} 
+ #select1::-moz-selection {background-color: red;} 
+ #select2::selection {color: green;} 
+ #select2::-moz-selection {color: green;} 
+</style>
+</head>
+<body>
+<p>Select <span id="select1">this text</span>. Now select <span id="select2">this text</span>.</p>   
+</body>
+</html>

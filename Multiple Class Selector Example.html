@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiple class selector example</title>
+<style>
+.heading{
+    font-family: Impact, sans-serif;
+}
+.veryimportant{
+    background-color: yellow;
+}
+.stuff{
+    color:red;
+}
+.veryimportant.stuff{
+    font-style: italic;
+}
+.veryimportant.example.stuff{
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<h1 class="veryimportant heading stuff">Heading (yellow background, red
+text, italic,and impact)</h1>
+<p class="veryimportant">This is the first paragraph. (yellow background,
+black text)</p>
+<p class="stuff">This is the second paragraph. (red text, default
+background)</p>
+<p class="veryimportant stuff">This is the third paragraph.
+(yellow background, red text, italic)</p>
+<p class="stuff veryimportant example dummy">This is the fourth paragraph.
+(yellow background,red text,italic,underline)</p>
+</body>
+</html>

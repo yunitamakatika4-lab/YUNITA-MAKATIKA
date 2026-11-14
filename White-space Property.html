@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White-space Property</title>
+<style type="text/css" media="all"> 
+ p.pre   {white-space: pre;} 
+ p.nowrap {white-space: nowrap;} 
+</style> 
+</head>
+<body>
+<p>This is a standard paragraph 
+            notice 
+                  that white 
+              space 
+              is not preserved.</p>
+<p class="pre">This paragraph
+            had
+            it's    white-space
+      rules    adjusted to
+            act
+            like  a
+                              pre element.</p>
+<p class="nowrap">This very long paragraph really ought to wrap but 
+it doesn't because the nowrap value has been set for the white-space 
+property.</p>    
+</body>
+</html>
